@@ -81,6 +81,8 @@ let exercises = "/exercises"
 let installer = "/install-platform.sh"
 let outreachy = "/outreachy"
 let logos = "/logo"
+let learn_cookbook = "/docs/cookbook"
+let learn_cookbook_recipe recipe = "/docs/cookbook/" ^ recipe
 
 let github_installer =
   "https://github.com/tarides/ocaml-platform-installer/releases/latest/download/installer.sh"

@@ -5,6 +5,7 @@ type section =
   | Platform
   | Guides
   | Exercises
+  | Cookbook
   | Books
 
 let tabs
@@ -22,6 +23,7 @@ let tabs
     | Platform -> Url.platform
     | Guides -> Url.learn_guides
     | Exercises -> Url.exercises
+    | Cookbook -> Url.learn_cookbook
     | Books -> Url.books
   in
   let section_to_string = function
@@ -31,6 +33,7 @@ let tabs
     | Platform -> "Platform"
     | Guides -> "Guides"
     | Exercises -> "Exercises"
+    | Cookbook -> "Cookbook"
     | Books -> "Books"
   in
   let breadcrumb_options current =
@@ -70,6 +73,8 @@ let tabs
         <%s! link ~href:Url.learn_guides ~title:"Guides" ~current:(current = Guides) %>
 
         <%s! link ~href:Url.exercises ~title:"Exercises" ~current:(current = Exercises) %>
+
+        <%s! link ~href:Url.learn_cookbook ~title:"Cookbook" ~current:(current = Cookbook) %>
 
         <%s! link ~href:Url.books ~title:"Books" ~current:(current = Books) %>
       </nav>
